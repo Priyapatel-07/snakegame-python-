@@ -5,6 +5,7 @@ from freegames import square,vector
 food = vector(0,0)
 snake = [vector(10,0)]
 aim = vector(0,-10)
+turtle.bgcolor('turquoise')
 
 def change(x,y):  # x and y axis
     "change snake direction"
@@ -36,9 +37,9 @@ def move():            #for movement of the snake
     clear()
 
     for body in snake:     #snake is combination of squares
-        square(body.x,body.y,9,'blue')
+        square(body.x,body.y,9,'black')
 
-    square(food.x,food.y,9,'green') 
+    square(food.x,food.y,9,'orange') 
     update()
     ontimer(move, 100)
 
